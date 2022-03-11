@@ -37,9 +37,9 @@ console.table(users);
 
 const usersLicense = users.map((element) => {
     if (element.age >= 18) {
-        return (`${element.user} ${element.lastname} u are ${element.age}, so u can drive! enjoy!`);
+        return (`Dear ${element.user} ${element.lastname}. you are ${element.age} years old, so you can drive! enjoy!`);
     } else {
-        return (`${element.user} ${element.lastname} u are ${element.age}, so u can't drive mate, sorry.`);
+        return (`Dear ${element.user} ${element.lastname}, you are ${element.age} years old, so you can't drive mate, sorry.`);
     }
 });
 
