@@ -15,11 +15,6 @@
 const users = [];
 
 
-
-/*     user.name = names[Math.floor(Math.random() * names.length)][0].toUpperCase() + names[Math.floor(Math.random() * names.length)].substring(1);
-    user.lastname = lasNames[Math.floor(Math.random() * lasNames.length)][0].toUpperCase() + lasNames[Math.floor(Math.random() * lasNames.length)].substring(1);
-    user.age = Math.floor(Math.random() * ((35 + 1) - 15) + 15); */
-
 for (i = 0; i < names.length; i++){
         const user =
         {
@@ -32,10 +27,20 @@ for (i = 0; i < names.length; i++){
 
 console.table(users);
 
-users.forEach((element) => {
+/* users.forEach((element) => {
     if (element.age >= 18) {
         console.log(`${element.user} ${element.lastname} u have ${element.age}, so u can drive! enjoy!`)
     } else {
         console.log(`${element.user} ${element.lastname} u have ${element.age}, so u can't drive mate, sorry.`);
     }
-})
+}); */
+
+const usersLicense = users.map((element) => {
+    if (element.age >= 18) {
+        return (`${element.user} ${element.lastname} u are ${element.age}, so u can drive! enjoy!`);
+    } else {
+        return (`${element.user} ${element.lastname} u are ${element.age}, so u can't drive mate, sorry.`);
+    }
+});
+
+console.table(usersLicense);
